@@ -17,4 +17,11 @@ Rspec.describe Solver do
         expect { solver.factorial(-1) }.to raise_error(ArgumentError)
       end
     end
+  end
+  describe '#reverse' do
+    it 'reverse a word' do
+      expect(solver.reverse('hello')).to eq('olleh')
+      expect(solver.reverse('microverse')).to eq('esrevorcim')
+    end
+  end
 end
