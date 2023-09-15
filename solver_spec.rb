@@ -11,4 +11,10 @@ Rspec.describe Solver do
         expect(solver.factorial(0)).to eq(1)
       end
     end
+
+    context 'Test the factorial of a negative input' do
+      it 'exception error' do
+        expect { solver.factorial(-1) }.to raise_error(ArgumentError)
+      end
+    end
 end
